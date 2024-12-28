@@ -54,7 +54,7 @@
     - form validation
     - ?secure routes?
 
-2. ### Home Page
+2. ### Dashboard
     - Settings
         - change language (en, de, fr, es)
         - enable/disable 2FA
