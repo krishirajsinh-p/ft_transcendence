@@ -8,41 +8,22 @@
     - Minor module: Use a database for the backend. [2]
 
 - ### User Management
-    - Major module: Implementing a remote authentication. [3]
+    - Major module: Implementing a remote authentication. [3] (krish)
 
 - ### Gameplay and User Experience
-    - Major module: Remote players. [4]
+    - Major module: Multiplayers (more than 2 in the same game). [4] (randy)
 
 - ### AI Algorithm
-    - Major module: Introduce an AI Opponent. [5]
+    - Major module: Introduce an AI Opponent. [5] (krish/randy)
 
 - ### Cybersecurity
-    - Major module: Implement Two-Factor Authentication (2FA) and JWT. [6]
+    - Major module: Implement Two-Factor Authentication (2FA) and JWT. [6] (orestu)
 
 - ### DevOps
     - Major module: Designing the Backend as Microservices. [7]
 
 - ### Accessibility
     - Minor module: Multiple language supports. [7.5]
-
-## Fallback Options
-
-- ### Graphics
-    - Major module: Use of advanced 3D techniques.
-
-- ### Accessibility
-    - Minor module: Expanding Browser Compatibility.
-    - Minor module: Server-Side Rendering (SSR) Integration.
-
-- ### Server-Side Pong
-    - Major module: Replacing Basic Pong with Server-Side Pong and Implementing an API.
-
-- ### DevOps
-    - Major module: Infrastructure Setup for Log Management.
-    - Minor module: Monitoring system.
-
-- ### Cybersecurity
-    - Major module: Implement WAF/ModSecurity with Hardened Configuration and HashiCorp Vault for Secrets Management.
 
 ## Project Plan
 
@@ -63,24 +44,27 @@
         - Same keyboard
     
     - Play with an AI
-        - Set Random alias for AI
         - AI adapts
         - applies same rules for fairness
-    
-    - Play Online with Random
-        - Play with an AI if no one is available
+
+    - Multiplayer
+        - Play with a friends (max 4)
+        - Same Keyboard
     
     - Tournament
-        - List of tournaments with time and date
-        - Create/Delete tournament
-        - Join a tournament
+        - all local players (max 8)
+    
+    - Play Online with Random **(fallback)**
+        - Play with an AI if no one is available
 
-## Game Rules
+## Tournament Rules
 
-1. Set Alias
-2. Random Match Making (if applicable)
+1. Set Alias for all players
+2. Random Match Making
 3. 10 points to win or most points in 10 minutes
     - tie breaker: first to score
+4. Winner moves to next round
+5. unavailable players are disqualified
 
 ## Database Schema
 
@@ -92,9 +76,24 @@
     - 2FA: boolean
     - language: string/int
 
-2. Tournament
-    - id: int
-    - name: string
-    - time: datetime
-    - players: int
-    - winner: int
+## Fallback Target Modules
+
+- ### Gameplay and User Experience
+    - Major module: Remote players.
+
+- ### Graphics
+    - Major module: Use of advanced 3D techniques.
+
+- ### Accessibility
+    - Minor module: Expanding Browser Compatibility.
+    - Minor module: Server-Side Rendering (SSR) Integration.
+
+- ### Server-Side Pong
+    - Major module: Replacing Basic Pong with Server-Side Pong and Implementing an API.
+
+- ### DevOps
+    - Major module: Infrastructure Setup for Log Management.
+    - Minor module: Monitoring system.
+
+- ### Cybersecurity
+    - Major module: Implement WAF/ModSecurity with Hardened Configuration and HashiCorp Vault for Secrets Management.
