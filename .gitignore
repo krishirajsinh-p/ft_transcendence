@@ -1,4 +1,9 @@
-.DS_Store
+[directories]
+.venv
 .vscode
+__pycache__
+playground
 
+[files]
+.DS_Store
 .env
